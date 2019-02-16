@@ -419,6 +419,7 @@ class Html
         } else {
             $data['listdepth'] = 0;
             $styles['list'] = 'listStyle_' . self::$listIndex++;
+            $styles['paragraph'] = ['alignment' => 'both'];
             $element->getPhpWord()->addNumberingStyle($styles['list'], self::getListStyle($isOrderedList));
         }
         if ($node->parentNode->nodeName === 'li') {
